@@ -1,5 +1,5 @@
-#安装parallel_studio_XE_2019u3版本
-# 20190313 pengcz1@lenovo.com
+# 安装parallel_studio_XE_2019u3版本
+#####  2019-03-13 pengcz1@lenovo.com
 ### 1 安装操作系统，使用默认的xcat osimage模板rhels7.6-x86_64-install-compute
 ### 2 安装所需要的依赖包
 ```
@@ -55,7 +55,7 @@ inspector_2019.3.0.591484           vtune_amplifier_2019.3.0.591499
 intelpython3
 
 ```
-## 安装前提要求
+### 安装前提要求
 ```
 
 需要在本地网络中安装intel license manager ，并运行
