@@ -1,7 +1,7 @@
-# ms run log
+# ms example 
+#
 ```
 [root@micro-106 ~]#python3.6 read_ms_gen6_rack_info.py
-
 Find MS rack manager IP is 192.168.11.48
 b'|    3    |     ON     |   True   |      3     | 28:16:A8:FD:13:DA  |     Success    \r\n|    4    |     ON     |   True   |      4     | 28:16:A8:FD:14:D1  |     Success    \r\n|    5    |     ON     |   True   |      5     | 28:16:A8:FD:17:64  |     Success    \r\n|    6    |     ON     |   True   |      6     | 28:16:A8:FD:17:CB  |     Success    \r\n|    7    |     ON     |   True   |      7     | 28:16:A8:FD:15:D8  |     Success    \r\n|    8    |     ON     |   True   |      8     | 28:16:A8:FD:17:CE  |     Success    \r\n|    9    |     ON     |   True   |      9     | 28:16:A8:FD:14:7A  |     Success    \r\n|   10    |     ON     |   True   |     10     | 28:16:A8:FD:14:9D  |     Success    \r\n|   11    |     ON     |   True   |     11     | 28:16:A8:FD:15:47  |     Success    \r\n|   12    |     ON     |   True   |     12     | 28:16:A8:FD:13:E2  |     Success    \r\n|   13    |     ON     |   True   |     13     | 28:16:A8:FD:13:F0  |     Success    \r\n|   14    |     ON     |   True   |     14     | 28:16:A8:FD:14:76  |     Success    \r\n|   27    |     ON     |   True   |     27     | 28:16:A8:FD:17:2A  |     Success    \r\n|   28    |     ON     |   True   |     28     | 28:16:A8:FD:15:58  |     Success    \r\n|   29    |     ON     |   True   |     29     | 28:16:A8:FD:14:B9  |     Success    \r\n|   30    |     ON     |   True   |     30     | 28:16:A8:FD:15:5C  |     Success    \r\n|   31    |     ON     |   True   |     31     | 28:16:A8:FD:14:AA  |     Success    \r\n|   32    |     ON     |   True   |     32     | 28:16:A8:FD:17:BE  |     Success    \r\n|   33    |     ON     |   True   |     33     | 28:16:A8:FD:15:CC  |     Success    \r\n|   34    |     ON     |   True   |     34     | 28:16:A8:FD:14:68  |     Success    \r\n|   35    |     ON     |   True   |     35     | 28:16:A8:FD:14:61  |     Success    \r\n|   36    |     ON     |   True   |     36     | 28:16:A8:FD:15:62  |     Success    \r\n|   37    |     ON     |   True   |     37     | 28:16:A8:FD:17:77  |     Success    \r\n|   38    |     ON     |   True   |     38     | 28:16:A8:FD:14:D9  |     Success    \r\n'
 |    3    |     ON     |   True   |      3     | 28:16:A8:FD:13:DA  |     Success
@@ -556,4 +556,5 @@ host 172.30.101.24 setting ok
 >         ip,mac = line.split()
 >         mac2ip[mac] = ip
 [root@micro-106 ~]#
+
 ```
