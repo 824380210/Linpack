@@ -38,6 +38,7 @@ mlx4_0 port 2 ==> eth7 (Down)
 [root@micro-106 linpack]#pdsh -w 172.30.101.[1-24] "cd /root; tar zxvf /dfcxact/product/common/linpack/HPL.tgz"
 # 准备HPL.dat文件
 [root@micro-106 linpack]# pdsh -w 172.30.101.[1-24] "scp /dfcxact/product/common/linpack/HPL.dat /root/HPL/"
+[root@micro-106 linpack]# pdsh -w 172.30.101.[1-24] "scp /dfcxact/product/common/linpack/run_smp_10hrs /root/HPL/ "
 # hugepage setup
 [root@micro-106 linpack]# pdsh -w 172.30.101.[1-24] "echo 92 > /sys/devices/system/node/node0/hugepages/hugepages-1048576kB/nr_hugepages;echo 92 > /sys/devices/system/node/node1/hugepages/hugepages-1048576kB/nr_hugepages"
 
