@@ -9,6 +9,24 @@ nmap -p22 --system-dns 192.168.14.0/24
 #### 运行python脚本
 
 ```
+# make sure the interface connect to th TOR switch have setup with 192.168.x.0 network and 172.30.0.1(linpack IP ) for communication 
+#
+[root@micro-106 ~]#ibdev2netdev
+mlx4_0 port 1 ==> eth6 (Up)
+mlx4_0 port 2 ==> eth7 (Down)
+#
+# use the "ip addr show dev eth6" to check the IP address ,but not use the ifconfig ,it will not show all IP as we expect 
+[root@micro-106 ~]#ip addr show dev eth6
+10: eth6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP qlen 1000
+    link/ether 24:8a:07:63:05:81 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.14.2/24 brd 192.168.14.255 scope global eth6
+    inet 172.30.0.1/16 brd 172.30.255.255 scope global eth6
+    inet6 fe80::268a:7ff:fe63:581/64 scope link
+       valid_lft forever preferred_lft forever
+
+##
+##
+
 [root@micro-106 linpack]#python3.6 /root/read_ms_gen6_rack_info.py
 
 ```
