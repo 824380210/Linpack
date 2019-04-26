@@ -69,7 +69,7 @@ def myrun_cmd( cmd,timeout=10 ):
 #cmd = "arp | grep f0:1d:bc | awk '{print $1 }'| grep 192.168"
 def get_ip_by_mac(mac_address):
     mac = mac_address.lower()
-    cmd = " arp | grep " + mac  + " | awk '{print $1}' "
+    cmd = " arp | grep " + mac  + " | awk '{print $1}' | head -n 1 "
     rsp  = myrun_cmd(cmd,timeout=10)
     return rsp.strip()
 # update the arp table with nmap scan
