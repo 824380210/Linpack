@@ -71,5 +71,34 @@ done
 
 ```
 
+# cluster level linpack step after single node level linpack done 
+```
+# 1: update the HPL.dat base on the cluster node number and memory size 
+	pdsh -w 172.30.101.[1-24] "scp /dfcxact/product/common/linpack/HPL.dat.24 /root/HPL/HPL.dat "
 
+# 2: update the /etc/hosts for name resolution for whole cluster 
+	pdsh -w 172.30.101.[1-24] "scp /dfcxact/product/common/linpack/hosts  /etc/hosts "
+
+# 3: update the hostfile ,so all compute node in hostfile will join the cluster level linpack run
+	pdsh -w 172.30.101.[1-24] "scp /dfcxact/product/common/linpack/hostfile  /root/HPL/ "
+# 4: update the scripts in one compute node (any node ),then run the scripts for cluster level 
+
+[root@micro-106 ~]#ssh 172.30.101.1
+[root@node01 ~]# cd HPL/
+[root@node01 HPL]# vim run_smp_24_10hrs
+[root@node01 HPL]# cat run_smp_24_10hrs
+PATH=$PATH:/root/HPL:
+export LD_LIBRARY_PATH=/root/HPL
+
+export I_MPI_FALLBACK=disable
+export I_MPI_FABRICS=shm:tcp
+export HPL_HWPREFETCH=1
+export HNAME=`hostname`
+for a in `seq 10`
+do
+mpirun -genvall -np 48 -ppn 2 -f hostfile  -genv I_MPI_NETMASK  eth0  /root/HPL/run_TLP_sky  | tee -a /dfcxact/product/common/linpack/24node_cluster_10hrs.log
+done
+[root@node01 HPL]#bash run_smp_24_10hrs
+
+```
 
