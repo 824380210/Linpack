@@ -1,7 +1,32 @@
 # Microsoft Gen 6 Rack linpack test step for reference 
 #
 #
-# 
+#### determine the interface that connect to the Gen 6 rack 
+```
+[root@micro-106 linpack]#ibdev2netdev
+mlx4_0 port 1 ==> eth6 (Up)
+mlx4_0 port 2 ==> eth7 (Down)
+```
+#### determine the linpack IP for management node (remove first if have been config ,then config in case MFG use another port for rack test 
+```
+[root@micro-106 linpack]#ip addr show dev eth6
+10: eth6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP qlen 1000
+    link/ether 24:8a:07:63:05:81 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.14.2/24 brd 192.168.14.255 scope global eth6
+    inet 172.30.0.1/16 brd 172.30.255.255 scope global eth6
+    inet6 fe80::268a:7ff:fe63:581/64 scope link
+       valid_lft forever preferred_lft forever
+
+[root@micro-106 linpack]#ip a | grep 172.30
+    inet 172.30.0.1/16 brd 172.30.255.255 scope global eth6
+
+
+
+[root@micro-106 linpack]#ip addr del dev eth6 172.30.0.1/16
+
+
+``` 
+
 #### scan the dhcp.lease file or arp tables to find the rack manager 
 ```
 
@@ -54,4 +79,5 @@
 
 ```
 #### debug if need (single linpack run or group linpack run )
+#### remove the linpack IP in the management node 
 #### goto next step   
