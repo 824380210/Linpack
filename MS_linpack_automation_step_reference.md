@@ -179,16 +179,91 @@ id_hostname = {
 ```
 
 #### ssh compute node to update the SSH key pair for passwordless authentications (linpack MPI process requirement )
+```
+[root@micro-106 linpack]#pwd
+/dfcxact/product/common/linpack
+[root@micro-106 linpack]#md5sum ssh_keys.tgz
+4199a282d2ff1fa5bcabf271e6a9dd38  ssh_keys.tgz
+[root@micro-106 linpack]#
+
+
+```
 
 #### ssh compute node to set the hostname base on the tables  
+```
+set the hostname like node01.cluster ,node02.cluster and so on 
+
+```
 #### ssh compute node to set the linpack IP base on the tables 
 
 #### untar the linpack tools to the /root/HPL dir
 
 #### update the /etc/hosts for name resolutions 
 #### update the HPL.dat base on the Memory install on the compute node 
+```
+filename is HPL.dat."install_DIMM size"."compute node number"
+[root@micro-106 linpack]#ls HPL.dat.* -l
+-rw-r--r-- 1 root root 1155 Apr 29 02:18 HPL.dat.16G_1
+-rw-r--r-- 1 root root 1155 Apr 29 02:15 HPL.dat.16G_24
+-rw-r--r-- 1 root root 1155 Apr 29 02:29 HPL.dat.16G_36
+-rw-r--r-- 1 root root 1155 Apr 26 10:25 HPL.dat.24
+-rw-r--r-- 1 root root 1155 Apr 29 02:34 HPL.dat.32G_1
+-rw-r--r-- 1 root root 1155 Apr 29 02:26 HPL.dat.32G_24
+-rw-r--r-- 1 root root 1155 Apr 29 02:30 HPL.dat.32G_36
+-rw-r--r-- 1 root root 1155 Apr 29 02:20 HPL.dat.64G_1
+-rw-r--r-- 1 root root 1155 Apr 29 02:27 HPL.dat.64G_24
+-rw-r--r-- 1 root root 1155 Apr 29 02:30 HPL.dat.64G_36
+-rw-r--r-- 1 root root 1155 Apr 29 02:19 HPL.dat.8G_1
+-rw-r--r-- 1 root root 1155 Apr 29 02:21 HPL.dat.8G_24
+-rw-r--r-- 1 root root 1155 Apr 29 02:28 HPL.dat.8G_36
+
+
+```
 #### update the hostfile (who will join the cluster linpack ? )
+```
+[root@micro-106 linpack]#cat hostfile
+node01
+node02
+node03
+node04
+node05
+node06
+node07
+node08
+node09
+node10
+node11
+node12
+node13
+node14
+node15
+node16
+node17
+node18
+node19
+node20
+node21
+node22
+node23
+node24
+
+
+```
 #### start to run the cluster linpack
+```
+[root@micro-106 linpack]#cat run_smp_24
+PATH=$PATH:/root/HPL:
+export LD_LIBRARY_PATH=/root/HPL
+
+export I_MPI_FALLBACK=disable
+export I_MPI_FABRICS=shm:tcp
+export HPL_HWPREFETCH=1
+export HNAME=`hostname`
+mpirun -genvall -np 48 -ppn 2 -f hostfile  -genv I_MPI_NETMASK  eth0  /root/HPL/run_TLP_sky  | tee -a /dfcxact/product/common/linpack/24node_${HNAME}_$(date +%Y%m%d%H%M%S).log
+
+
+
+```
 #### check the linpack result fo see if pass or failed 
 ```
 [root@micro-106 linpack]#cat 24node_9run.log | grep 'CPU Cycle'
