@@ -46,9 +46,10 @@ ot@mfg-l1-4nl3 ~]# arp | grep 'f0:1d:bc'
 |   37    |     ON     |   True   |     37     | 28:16:A8:FD:07:DC  |     Success
 |   38    |     ON     |   True   |     38     | 28:16:A8:FD:08:0F  |     Success
 
+#                                      slot ID      MAC
 
 ```
-#### create the static slot ID to hostname mappings (table 2 )
+#### create the static slot ID to Linpack IP  mappings (table 2 )
 ```
 # python3 dictionary , compute node will have 2 IP for eth0 ,one is from DHCP ,one is set base on the slot ID locations 
 id_ip= {    "3":"172.30.101.1",
@@ -79,6 +80,38 @@ id_ip= {    "3":"172.30.101.1",
 
 
 ```
+#### create the slot ID to hostname tables 
+```
+id_hostname = {
+               "3":"node01.cluster",
+               "4":"node02.cluster",
+               "5":"node03.cluster",
+               "6":"node04.cluster",
+               "7":"node05.cluster",
+               "8":"node06.cluster",
+               "9":"node07.cluster",
+               "10":"node08.cluster",
+               "11":"node09.cluster",
+               "12":"node10.cluster",
+               "13":"node11.cluster",
+               "14":"node12.cluster",
+               "27":"node13.cluster",
+               "28":"node14.cluster",
+               "29":"node15.cluster",
+               "30":"node16.cluster",
+               "31":"node17.cluster",
+               "32":"node18.cluster",
+               "33":"node19.cluster",
+               "34":"node20.cluster",
+               "35":"node21.cluster",
+               "36":"node22.cluster",
+               "37":"node23.cluster",
+               "38":"node24.cluster"
+               }
+
+
+```
+
 #### create the static hostname to linpack IP mappings （require or not ? ）(tables 3)
 ```
 ## all compute node will have the same /etc/hosts for cluster level linpack 
