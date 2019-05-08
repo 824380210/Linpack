@@ -46,8 +46,9 @@ n02: Swap:             0           0           0
 [root@n01 HPL]# cat hostfile
 n01
 n02
-[root@n01 HPL]# cat HPL.dat
-## make sure all compute node use the same HPL.dat file (so same parameters )
+
+# make sure all compute node use the same HPL.dat file (so same parameters )
+
 [root@n01 HPL]# cat HPL.dat
 HPLinpack benchmark input file
 Innovative Computing Laboratory, University of Tennessee
