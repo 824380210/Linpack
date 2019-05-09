@@ -186,3 +186,33 @@ Active Numa :    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  
 
 
 ```
+#### check the test result to see if PASS or NOT (CPU Cycle >70% and BUS Cycle > 64%)
+```
+Peak Performance =    4526.54 GFlops /  1131.64 GFlops per node
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WR00L2L4      204288   384     2     2            1302.97            4.36222e+03
+HPL_pdgesv() start time Thu May  9 11:58:06 2019
+
+HPL_pdgesv() end time   Thu May  9 12:19:49 2019
+
+        HPL Efficiency by CPU Cycle   78.922%
+        HPL Efficiency by BUS Cycle   68.033%
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0038237 ...... PASSED
+================================================================================
+
+Finished      1 tests with the following results:
+              1 tests completed and passed residual checks,
+              0 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================
+
+
+
+```
+# if failed in cluster level linpack test ,then try to debug with single node linpack run 
