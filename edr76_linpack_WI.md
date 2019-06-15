@@ -147,10 +147,12 @@ Finished      1 tests with the following results:
 End of Tests.
 ================================================================================
 
+```
+### Options setup the hugepages settings before the Linpack (should be enable in all compute node )
+```
+psh n01-n02 bash /root/HPL/enable_hugepages 
 
-
-
-
+# this is options operations ,you can try if the test result is not so good as expected 
 
 
 
