@@ -1,7 +1,7 @@
 #   Debug the MicroSoft Linpack Test 
 
 
-# if we failed in the 24 node group Level ( or Rack Level ) Linpack Test,then try to do the single node linpack as below
+# if we failed in the 24 node group Level ( same as we said as Rack Level ) Linpack Test,then try to do the single node linpack as below
 
 # Single node level stress test procedure 
 ### 1: login the compute node 
