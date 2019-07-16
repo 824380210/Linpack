@@ -9,7 +9,54 @@
                           
 ```
 # when start to test your OPA cluster ,you should update your HPL.dat and hostfile base on the real order configurations 
+### tips : the N value in HPL.dat
+```
+after the netboot image boot up and running 
+you can login any compute node and chck the N value in the /root/HPL/NB_value file to get more info 
+it should be meet in most scenario
 
+
+[root@n04 HPL]# pwd
+/root/HPL
+[root@n04 HPL]# cat NB_value
+with 1 node ,and memory is 96 GB        N/NB: 90% = 384 102144
+with 1 node ,and memory is 192 GB       N/NB: 90% = 384 144384
+with 1 node ,and memory is 384 GB       N/NB: 90% = 384 204288
+with 1 node ,and memory is 768 GB       N/NB: 90% = 384 288768
+
+with 2 node ,and memory is 96 GB        N/NB: 90% = 384 144384
+with 2 node ,and memory is 192 GB       N/NB: 90% = 384 204288
+with 2 node ,and memory is 384 GB       N/NB: 90% = 384 288768
+with 2 node ,and memory is 768 GB       N/NB: 90% = 384 408576
+
+with 4 node ,and memory is 96 GB        N/NB: 90% = 384 204288
+with 4 node ,and memory is 192 GB       N/NB: 90% = 384 288768
+with 4 node ,and memory is 384 GB       N/NB: 90% = 384 408576
+with 4 node ,and memory is 768 GB       N/NB: 90% = 384 577536
+
+with 6 node ,and memory is 96 GB        N/NB: 90% = 384 249984
+with 6 node ,and memory is 192 GB       N/NB: 90% = 384 353664
+with 6 node ,and memory is 384 GB       N/NB: 90% = 384 500352
+with 6 node ,and memory is 768 GB       N/NB: 90% = 384 707712
+
+...
+...
+th 32 node ,and memory is 96 GB       N/NB: 90% = 384 577536
+with 32 node ,and memory is 192 GB      N/NB: 90% = 384 817152
+with 32 node ,and memory is 384 GB      N/NB: 90% = 384 1155456
+with 32 node ,and memory is 768 GB      N/NB: 90% = 384 1634304
+
+with 34 node ,and memory is 96 GB       N/NB: 90% = 384 595584
+with 34 node ,and memory is 192 GB      N/NB: 90% = 384 842112
+with 34 node ,and memory is 384 GB      N/NB: 90% = 384 1191168
+with 34 node ,and memory is 768 GB      N/NB: 90% = 384 1684608
+
+with 36 node ,and memory is 96 GB       N/NB: 90% = 384 612864
+with 36 node ,and memory is 192 GB      N/NB: 90% = 384 866688
+with 36 node ,and memory is 384 GB      N/NB: 90% = 384 1225728
+with 36 node ,and memory is 768 GB      N/NB: 90% = 384 1733376
+
+```
 # create the OPA network netboot osimage
 ```
 [root@mgt opa76]# md5sum /root/opa76_19A_20190514.tgz
