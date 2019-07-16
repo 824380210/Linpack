@@ -1,5 +1,15 @@
 # OPA Network Linpack Test instruction
 
+## demo cluster configuration 
+```
+- 2 compute node in a groups : n03.cluster and n04.cluster
+- opa network 
+- compute node configure: CPU   :8160 x2 
+                          Memory:16GB *12 
+                          
+```
+# when start to test your OPA cluster ,you should update your HPL.dat and hostfile base on the real order configurations 
+
 # create the OPA network netboot osimage
 ```
 [root@mgt opa76]# md5sum /root/opa76_19A_20190514.tgz
