@@ -1,7 +1,9 @@
 #  RUN LINPACK TEST ON THE SOCKET(CPU)
 
 ### if we have singel node linpack failed or low performance ,then we need to find out which CPU(socket) cause bad performance 
+
 ### example of linpack failed
+
 ```
 
 Peak Performance =    2120.62 GFlops /  1060.31 GFlops per node
@@ -34,9 +36,12 @@ Finished      1 tests with the following results:
 End of Tests.
 
 ```
+
 ### example bad performance VS good performance
+
 ```
 # 2 sockets linpack run but bad performance 
+## the CPU TDP not meet the Powr field in the output (like 240TDP vs 1xx TDP )
  
 Random number generator performance :   3151 M words/cycle
 Highest Memory BW : 94.277 GB/sec on a5node55
@@ -156,6 +161,7 @@ End of Tests.
 # how to run on single socket
 
 ### 1: update the  HPL.dat with P=Q=1 with normal other parameter as we do in general process 
+
 ```
 # normal HPL.dat 
 
@@ -176,8 +182,10 @@ WC00L2L4      144384   384     1     1            2122.20            9.45554e+02
 ###  2: hostfile should be same for single socket and 2 socket single node linpack 
 #
 ###  3: update the run cpu 0  script as below
+
 ```
 # the normal run linpack on 2 socket script
+
 [root@S02MGT16 HPL]# cat  mgt_edr2node.sh
 PATH=$PATH:/root/HPL:
 export LD_LIBRARY_PATH=/root/HPL
@@ -220,6 +228,7 @@ mpirun -genvall -np 1 -ppn 1 -f hostfile /root/HPL/run_TLP_sky_cpu0 |& tee -a /i
 umount /install
 
 # show the different about the normal linpack and single socket linpacu
+
 [root@S02MGT16 HPL]# diff mgt_edr2node.sh mgt_edr2node_cpu0.sh
 17c17
 < mpirun -genvall -np 2 -ppn 2 -f hostfile /root/HPL/run_TLP_sky |& tee -a /install/linpack/Chassis_${HNAME}_cluster_${fmt}.log
@@ -232,6 +241,7 @@ umount /install
 ### 4: specify the CPU that to run linpack
 ```
 # normal stress test on both CPU
+
 [root@S02MGT16 HPL]# cat run_TLP_sky
 
 
@@ -251,7 +261,9 @@ export MPI_RANK_FOR_NODE=$((PMI_RANK % MPI_PER_NODE))
     esac
 
 /root/HPL/xhpl_lrz
+
 # cpu 0 sterss 
+
 [root@S02MGT16 HPL]# cat run_TLP_sky_cpu0
 
 
@@ -266,6 +278,7 @@ export MPI_RANK_FOR_NODE=$((PMI_RANK % MPI_PER_NODE))
 /root/HPL/xhpl_lrz
 
 # show the different between the normal linpack and special linpack  
+
 [root@S02MGT16 HPL]# diff run_TLP_sky run_TLP_sky_cpu0
 3c3
 < export MPI_PER_NODE=2
@@ -303,11 +316,16 @@ export MPI_RANK_FOR_NODE=$((PMI_RANK % MPI_PER_NODE))
 < mpirun -genvall -np 1 -ppn 1 -f hostfile /root/HPL/run_TLP_sky_cpu0 |& tee -a /install/linpack/Chassis_${HNAME}_cluster_${fmt}.log
 ---
 > mpirun -genvall -np 1 -ppn 1 -f hostfile /root/HPL/run_TLP_sky_cpu1 |& tee -a /install/linpack/Chassis_${HNAME}_cluster_${fmt}.log
+
+
 [root@S02MGT16 HPL]# diff run_TLP_sky_cpu0 run_TLP_sky_cpu1
 9c9
 <     export HPL_HOST_NODE=0
 ---
 >     export HPL_HOST_NODE=1
+
+# if you have 4 CPU ,then HPL_HOST_NODE  = 0 | 1 | 2 |3 
+
 [root@S02MGT16 HPL]#
 
 
@@ -316,6 +334,7 @@ export MPI_RANK_FOR_NODE=$((PMI_RANK % MPI_PER_NODE))
 <     export HPL_HOST_NODE=0
 ---
 >     export HPL_HOST_NODE=1
+
 [root@S02MGT16 HPL]# cat mgt_edr2node_cpu1.sh
 PATH=$PATH:/root/HPL:
 export LD_LIBRARY_PATH=/root/HPL
@@ -335,6 +354,7 @@ mount | grep $VMIP
 mkdir -p /install/linpack
 mpirun -genvall -np 1 -ppn 1 -f hostfile /root/HPL/run_TLP_sky_cpu1 |& tee -a /install/linpack/Chassis_${HNAME}_cluster_${fmt}.log
 umount /install
+
 [root@S02MGT16 HPL]#
 
 
