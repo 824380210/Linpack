@@ -1,0 +1,249 @@
+[root@mfg-l1-4nl3 debug_jmatthews2_lab_dimms]# trun tom.py
+190522-21:23:40 TESTS tom.py
+190522-21:23:41 WARN ----------------------------------------------------------------------------------------------------
+190522-21:23:41 WARN |                    Only 24 node per rack or 36 node per rack are support now                     |
+190522-21:23:41 WARN ----------------------------------------------------------------------------------------------------
+190522-21:23:41 INFO ----------------------------------------------------------------------------------------------------
+190522-21:23:41 INFO |                                   1:          Find RackManager                                   |
+190522-21:23:41 INFO ----------------------------------------------------------------------------------------------------
+190522-21:23:41 INFO Found RackManager IP: 192.168.11.197 MACAddress:f01dbcfd1022
+190522-21:23:41 INFO ----------------------------------------------------------------------------------------------------
+190522-21:23:41 INFO |                              2:  Check  RackManager SLOT ID to MAC                               |
+190522-21:23:41 INFO ----------------------------------------------------------------------------------------------------
+190522-21:23:51 INFO slot id is 3  and mac is 2816A8FD0A39
+190522-21:23:51 INFO slot id is 5  and mac is 2816A8FD07BC
+190522-21:23:51 INFO slot id is 7  and mac is 2816A8FD06DD
+190522-21:23:51 INFO slot id is 8  and mac is 2816A8FD07B1
+190522-21:23:51 INFO slot id is 9  and mac is 2816A8FD0892
+190522-21:23:51 INFO slot id is 27 and mac is 2816A8FD09C4
+190522-21:23:51 INFO slot id is 29 and mac is 2816A8FD0804
+190522-21:23:51 INFO slot id is 30 and mac is BC8385FAE276
+190522-21:23:51 INFO slot id is 31 and mac is 2816A8FD090A
+190522-21:23:51 INFO slot id is 32 and mac is 2816A8FD0780
+190522-21:23:51 INFO slot id is 33 and mac is 2816A8FD0AA3
+190522-21:23:51 INFO slot id is 34 and mac is 2816A8FD0A5C
+190522-21:23:51 INFO slot id is 35 and mac is 2816A8FD070B
+190522-21:23:51 INFO slot id is 36 and mac is 2816A8FD062F
+190522-21:23:51 INFO slot id is 37 and mac is 2816A8FD07DC
+190522-21:23:51 INFO slot id is 38 and mac is 2816A8FD080F
+190522-21:23:51 INFO ----------------------------------------------------------------------------------------------------
+190522-21:23:51 INFO |                            3:  check the MAC to the DHCP IP mappping                             |
+190522-21:23:51 INFO ----------------------------------------------------------------------------------------------------
+190522-21:23:51 INFO Found Slot ID 3   with  MAC 2816A8FD0A39 and with IP is 192.168.15.29
+190522-21:23:51 INFO Found Slot ID 5   with  MAC 2816A8FD07BC and with IP is 192.168.15.55
+190522-21:23:51 INFO Found Slot ID 7   with  MAC 2816A8FD06DD and with IP is 192.168.15.52
+190522-21:23:51 INFO Found Slot ID 8   with  MAC 2816A8FD07B1 and with IP is 192.168.15.49
+190522-21:23:51 INFO Found Slot ID 9   with  MAC 2816A8FD0892 and with IP is 192.168.15.50
+190522-21:23:51 INFO Found Slot ID 27  with  MAC 2816A8FD09C4 and with IP is 192.168.15.27
+190522-21:23:51 INFO Found Slot ID 29  with  MAC 2816A8FD0804 and with IP is 192.168.15.63
+190522-21:23:51 INFO Found Slot ID 30  with  MAC BC8385FAE276 and with IP is 192.168.15.66
+190522-21:23:51 INFO Found Slot ID 31  with  MAC 2816A8FD090A and with IP is 192.168.15.69
+190522-21:23:51 INFO Found Slot ID 32  with  MAC 2816A8FD0780 and with IP is 192.168.15.70
+190522-21:23:51 INFO Found Slot ID 33  with  MAC 2816A8FD0AA3 and with IP is 192.168.15.71
+190522-21:23:51 INFO Found Slot ID 34  with  MAC 2816A8FD0A5C and with IP is 192.168.15.59
+190522-21:23:52 INFO Found Slot ID 35  with  MAC 2816A8FD070B and with IP is 192.168.15.72
+190522-21:23:52 INFO Found Slot ID 36  with  MAC 2816A8FD062F and with IP is 192.168.15.40
+190522-21:23:52 INFO Found Slot ID 37  with  MAC 2816A8FD07DC and with IP is 192.168.15.68
+190522-21:23:52 INFO Found Slot ID 38  with  MAC 2816A8FD080F and with IP is 192.168.15.61
+190522-21:23:52 INFO ----------------------------------------------------------------------------------------------------
+190522-21:23:52 INFO |                          4:  check the SLOT ID  to the DHCP IP mappping                          |
+190522-21:23:52 INFO ----------------------------------------------------------------------------------------------------
+190522-21:23:52 INFO compute node in SLOT ID:3   with DHCP IP is 192.168.15.29
+190522-21:23:52 INFO compute node in SLOT ID:5   with DHCP IP is 192.168.15.55
+190522-21:23:52 INFO compute node in SLOT ID:7   with DHCP IP is 192.168.15.52
+190522-21:23:52 INFO compute node in SLOT ID:8   with DHCP IP is 192.168.15.49
+190522-21:23:52 INFO compute node in SLOT ID:9   with DHCP IP is 192.168.15.50
+190522-21:23:52 INFO compute node in SLOT ID:27  with DHCP IP is 192.168.15.27
+190522-21:23:52 INFO compute node in SLOT ID:29  with DHCP IP is 192.168.15.63
+190522-21:23:52 INFO compute node in SLOT ID:30  with DHCP IP is 192.168.15.66
+190522-21:23:52 INFO compute node in SLOT ID:31  with DHCP IP is 192.168.15.69
+190522-21:23:52 INFO compute node in SLOT ID:32  with DHCP IP is 192.168.15.70
+190522-21:23:52 INFO compute node in SLOT ID:33  with DHCP IP is 192.168.15.71
+190522-21:23:52 INFO compute node in SLOT ID:34  with DHCP IP is 192.168.15.59
+190522-21:23:52 INFO compute node in SLOT ID:35  with DHCP IP is 192.168.15.72
+190522-21:23:52 INFO compute node in SLOT ID:36  with DHCP IP is 192.168.15.40
+190522-21:23:52 INFO compute node in SLOT ID:37  with DHCP IP is 192.168.15.68
+190522-21:23:52 INFO compute node in SLOT ID:38  with DHCP IP is 192.168.15.61
+190522-21:23:52 INFO ----------------------------------------------------------------------------------------------------
+190522-21:23:52 INFO |                 5:  Update the compute node for SSH passwordless authentications                 |
+190522-21:23:52 INFO ----------------------------------------------------------------------------------------------------
+190522-21:23:52 INFO update the passwordless authentication on compute node in SLOT ID 3
+190522-21:23:53 INFO update the passwordless authentication on compute node in SLOT ID 5
+190522-21:23:54 INFO update the passwordless authentication on compute node in SLOT ID 7
+190522-21:23:54 INFO update the passwordless authentication on compute node in SLOT ID 8
+190522-21:23:55 INFO update the passwordless authentication on compute node in SLOT ID 9
+190522-21:23:56 INFO update the passwordless authentication on compute node in SLOT ID 27
+190522-21:23:56 INFO update the passwordless authentication on compute node in SLOT ID 29
+190522-21:23:57 INFO update the passwordless authentication on compute node in SLOT ID 30
+190522-21:23:58 INFO update the passwordless authentication on compute node in SLOT ID 31
+190522-21:23:59 INFO update the passwordless authentication on compute node in SLOT ID 32
+190522-21:23:59 INFO update the passwordless authentication on compute node in SLOT ID 33
+190522-21:24:00 INFO update the passwordless authentication on compute node in SLOT ID 34
+190522-21:24:01 INFO update the passwordless authentication on compute node in SLOT ID 35
+190522-21:24:01 INFO update the passwordless authentication on compute node in SLOT ID 36
+190522-21:24:02 INFO update the passwordless authentication on compute node in SLOT ID 37
+190522-21:24:03 INFO update the passwordless authentication on compute node in SLOT ID 38
+190522-21:24:03 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:03 INFO |         5.1 Update all compute node with same L1's id_rsa,authenticated_keys,id_rsa.pub          |
+190522-21:24:03 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:03 INFO upate keys authentication in compute node : slot ID: 3  and IP is 192.168.15.29
+190522-21:24:04 INFO upate keys authentication in compute node : slot ID: 5  and IP is 192.168.15.55
+190522-21:24:05 INFO upate keys authentication in compute node : slot ID: 7  and IP is 192.168.15.52
+190522-21:24:05 INFO upate keys authentication in compute node : slot ID: 8  and IP is 192.168.15.49
+190522-21:24:06 INFO upate keys authentication in compute node : slot ID: 9  and IP is 192.168.15.50
+190522-21:24:06 INFO upate keys authentication in compute node : slot ID: 27 and IP is 192.168.15.27
+190522-21:24:07 INFO upate keys authentication in compute node : slot ID: 29 and IP is 192.168.15.63
+190522-21:24:07 INFO upate keys authentication in compute node : slot ID: 30 and IP is 192.168.15.66
+190522-21:24:08 INFO upate keys authentication in compute node : slot ID: 31 and IP is 192.168.15.69
+190522-21:24:09 INFO upate keys authentication in compute node : slot ID: 32 and IP is 192.168.15.70
+190522-21:24:09 INFO upate keys authentication in compute node : slot ID: 33 and IP is 192.168.15.71
+190522-21:24:10 INFO upate keys authentication in compute node : slot ID: 34 and IP is 192.168.15.59
+190522-21:24:10 INFO upate keys authentication in compute node : slot ID: 35 and IP is 192.168.15.72
+190522-21:24:11 INFO upate keys authentication in compute node : slot ID: 36 and IP is 192.168.15.40
+190522-21:24:11 INFO upate keys authentication in compute node : slot ID: 37 and IP is 192.168.15.68
+190522-21:24:12 INFO upate keys authentication in compute node : slot ID: 38 and IP is 192.168.15.61
+190522-21:24:12 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:12 INFO |               6:  Update the compute node Hostname for MPI linpack run requiremenet              |
+190522-21:24:12 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:15 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:15 INFO |               6.1  Check the compute node Hostname for MPI process run requirement               |
+190522-21:24:15 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:15 INFO slot ID is 3  and hostname check is node3.cluster
+190522-21:24:15 INFO slot ID is 5  and hostname check is node5.cluster
+190522-21:24:16 INFO slot ID is 7  and hostname check is node7.cluster
+190522-21:24:16 INFO slot ID is 8  and hostname check is node8.cluster
+190522-21:24:16 INFO slot ID is 9  and hostname check is node9.cluster
+190522-21:24:16 INFO slot ID is 27 and hostname check is node27.cluster
+190522-21:24:16 INFO slot ID is 29 and hostname check is node29.cluster
+190522-21:24:17 INFO slot ID is 30 and hostname check is node30.cluster
+190522-21:24:17 INFO slot ID is 31 and hostname check is node31.cluster
+190522-21:24:17 INFO slot ID is 32 and hostname check is node32.cluster
+190522-21:24:17 INFO slot ID is 33 and hostname check is node33.cluster
+190522-21:24:17 INFO slot ID is 34 and hostname check is node34.cluster
+190522-21:24:18 INFO slot ID is 35 and hostname check is node35.cluster
+190522-21:24:18 INFO slot ID is 36 and hostname check is node36.cluster
+190522-21:24:18 INFO slot ID is 37 and hostname check is node37.cluster
+190522-21:24:18 INFO slot ID is 38 and hostname check is node38.cluster
+190522-21:24:18 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:18 INFO |                           7: setup the linpack IP for the compute node                           |
+190522-21:24:18 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:18 INFO Linpack IP setup done on the compute node in slot ID 3  with IP 172.30.101.3
+190522-21:24:19 INFO Linpack IP setup done on the compute node in slot ID 5  with IP 172.30.101.5
+190522-21:24:19 INFO Linpack IP setup done on the compute node in slot ID 7  with IP 172.30.101.7
+190522-21:24:20 INFO Linpack IP setup done on the compute node in slot ID 8  with IP 172.30.101.8
+190522-21:24:20 INFO Linpack IP setup done on the compute node in slot ID 9  with IP 172.30.101.9
+190522-21:24:20 INFO Linpack IP setup done on the compute node in slot ID 27 with IP 172.30.101.27
+190522-21:24:21 INFO Linpack IP setup done on the compute node in slot ID 29 with IP 172.30.101.29
+190522-21:24:21 INFO Linpack IP setup done on the compute node in slot ID 30 with IP 172.30.101.30
+190522-21:24:21 INFO Linpack IP setup done on the compute node in slot ID 31 with IP 172.30.101.31
+190522-21:24:22 INFO Linpack IP setup done on the compute node in slot ID 32 with IP 172.30.101.32
+190522-21:24:22 INFO Linpack IP setup done on the compute node in slot ID 33 with IP 172.30.101.33
+190522-21:24:23 INFO Linpack IP setup done on the compute node in slot ID 34 with IP 172.30.101.34
+190522-21:24:23 INFO Linpack IP setup done on the compute node in slot ID 35 with IP 172.30.101.35
+190522-21:24:23 INFO Linpack IP setup done on the compute node in slot ID 36 with IP 172.30.101.36
+190522-21:24:24 INFO Linpack IP setup done on the compute node in slot ID 37 with IP 172.30.101.37
+190522-21:24:24 INFO Linpack IP setup done on the compute node in slot ID 38 with IP 172.30.101.38
+190522-21:24:24 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:24 INFO |                    this rack with compute node with 16G  DIMM Memory install                     |
+190522-21:24:24 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:24 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:24 INFO |                      8: setup the linpack Hugepages    for the compute node                      |
+190522-21:24:24 INFO ----------------------------------------------------------------------------------------------------
+190522-21:24:28 INFO update the hugepage settings on  compute node node3.cluster
+190522-21:24:31 INFO update the hugepage settings on  compute node node5.cluster
+190522-21:24:35 INFO update the hugepage settings on  compute node node7.cluster
+190522-21:24:39 INFO update the hugepage settings on  compute node node8.cluster
+190522-21:24:42 INFO update the hugepage settings on  compute node node9.cluster
+190522-21:24:46 INFO update the hugepage settings on  compute node node27.cluster
+190522-21:24:49 INFO update the hugepage settings on  compute node node29.cluster
+190522-21:24:53 INFO update the hugepage settings on  compute node node30.cluster
+190522-21:24:56 INFO update the hugepage settings on  compute node node31.cluster
+190522-21:25:00 INFO update the hugepage settings on  compute node node32.cluster
+190522-21:25:04 INFO update the hugepage settings on  compute node node33.cluster
+190522-21:25:07 INFO update the hugepage settings on  compute node node34.cluster
+190522-21:25:11 INFO update the hugepage settings on  compute node node35.cluster
+190522-21:25:14 INFO update the hugepage settings on  compute node node36.cluster
+190522-21:25:18 INFO update the hugepage settings on  compute node node37.cluster
+190522-21:25:21 INFO update the hugepage settings on  compute node node38.cluster
+190522-21:25:21 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:21 INFO |                             9: extract  HPL.tgz to  the compute node                             |
+190522-21:25:21 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:22 INFO update the HPL.tgz file to compute node node3.cluster
+190522-21:25:22 INFO update the HPL.tgz file to compute node node5.cluster
+190522-21:25:22 INFO update the HPL.tgz file to compute node node7.cluster
+190522-21:25:23 INFO update the HPL.tgz file to compute node node8.cluster
+190522-21:25:23 INFO update the HPL.tgz file to compute node node9.cluster
+190522-21:25:23 INFO update the HPL.tgz file to compute node node27.cluster
+190522-21:25:23 INFO update the HPL.tgz file to compute node node29.cluster
+190522-21:25:24 INFO update the HPL.tgz file to compute node node30.cluster
+190522-21:25:24 INFO update the HPL.tgz file to compute node node31.cluster
+190522-21:25:24 INFO update the HPL.tgz file to compute node node32.cluster
+190522-21:25:25 INFO update the HPL.tgz file to compute node node33.cluster
+190522-21:25:25 INFO update the HPL.tgz file to compute node node34.cluster
+190522-21:25:25 INFO update the HPL.tgz file to compute node node35.cluster
+190522-21:25:26 INFO update the HPL.tgz file to compute node node36.cluster
+190522-21:25:26 INFO update the HPL.tgz file to compute node node37.cluster
+190522-21:25:26 INFO update the HPL.tgz file to compute node node38.cluster
+190522-21:25:26 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:26 INFO |                       10: update the /etc/hosts file for name resolutions                        |
+190522-21:25:26 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:26 INFO update   compute node node3.cluster  /etc/hosts for name resolutions
+190522-21:25:27 INFO update   compute node node5.cluster  /etc/hosts for name resolutions
+190522-21:25:27 INFO update   compute node node7.cluster  /etc/hosts for name resolutions
+190522-21:25:27 INFO update   compute node node8.cluster  /etc/hosts for name resolutions
+190522-21:25:27 INFO update   compute node node9.cluster  /etc/hosts for name resolutions
+190522-21:25:28 INFO update   compute node node27.cluster  /etc/hosts for name resolutions
+190522-21:25:28 INFO update   compute node node29.cluster  /etc/hosts for name resolutions
+190522-21:25:28 INFO update   compute node node30.cluster  /etc/hosts for name resolutions
+190522-21:25:28 INFO update   compute node node31.cluster  /etc/hosts for name resolutions
+190522-21:25:28 INFO update   compute node node32.cluster  /etc/hosts for name resolutions
+190522-21:25:28 INFO update   compute node node33.cluster  /etc/hosts for name resolutions
+190522-21:25:29 INFO update   compute node node34.cluster  /etc/hosts for name resolutions
+190522-21:25:29 INFO update   compute node node35.cluster  /etc/hosts for name resolutions
+190522-21:25:29 INFO update   compute node node36.cluster  /etc/hosts for name resolutions
+190522-21:25:29 INFO update   compute node node37.cluster  /etc/hosts for name resolutions
+190522-21:25:29 INFO update   compute node node38.cluster  /etc/hosts for name resolutions
+190522-21:25:29 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:29 INFO |                         11: Update the HPL.dat file to all compute node                          |
+190522-21:25:29 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:30 INFO update HPL.dat to compute node 3  => 172.30.101.3    successfully
+190522-21:25:30 INFO update HPL.dat to compute node 5  => 172.30.101.5    successfully
+190522-21:25:30 INFO update HPL.dat to compute node 7  => 172.30.101.7    successfully
+190522-21:25:30 INFO update HPL.dat to compute node 8  => 172.30.101.8    successfully
+190522-21:25:31 INFO update HPL.dat to compute node 9  => 172.30.101.9    successfully
+190522-21:25:31 INFO update HPL.dat to compute node 27 => 172.30.101.27   successfully
+190522-21:25:31 INFO update HPL.dat to compute node 29 => 172.30.101.29   successfully
+190522-21:25:31 INFO update HPL.dat to compute node 30 => 172.30.101.30   successfully
+190522-21:25:31 INFO update HPL.dat to compute node 31 => 172.30.101.31   successfully
+190522-21:25:32 INFO update HPL.dat to compute node 32 => 172.30.101.32   successfully
+190522-21:25:32 INFO update HPL.dat to compute node 33 => 172.30.101.33   successfully
+190522-21:25:32 INFO update HPL.dat to compute node 34 => 172.30.101.34   successfully
+190522-21:25:32 INFO update HPL.dat to compute node 35 => 172.30.101.35   successfully
+190522-21:25:32 INFO update HPL.dat to compute node 36 => 172.30.101.36   successfully
+190522-21:25:33 INFO update HPL.dat to compute node 37 => 172.30.101.37   successfully
+190522-21:25:33 INFO update HPL.dat to compute node 38 => 172.30.101.38   successfully
+190522-21:25:33 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:33 INFO |                        12: Update the hostfile file to first compute node                        |
+190522-21:25:33 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:33 INFO The first compute node  install in SLOT 3 and IP is 172.30.101.3
+190522-21:25:33 INFO hostfile create successfully in /tmp/hostfile
+190522-21:25:33 INFO update hostfile to 172.30.101.3 successfully
+190522-21:25:33 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:33 INFO |                     13: Update the linpack scripts to the first compute node                     |
+190522-21:25:33 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:33 INFO The first compute node  install in SLOT 3 and IP is 172.30.101.3
+190522-21:25:33 INFO Linpack scripts have been upload to 172.30.101.3 successfully
+190522-21:25:33 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:33 INFO |                           14: run the Linpack scripts in compute node                            |
+190522-21:25:33 INFO ----------------------------------------------------------------------------------------------------
+190522-21:25:33 INFO The first compute node  install in SLOT 3 and IP is 172.30.101.3
+190522-22:15:25 INFO Linpack scripts have been ==RUN== on 172.30.101.3 successfully
+190522-22:15:25 INFO ----------------------------------------------------------------------------------------------------
+190522-22:15:25 INFO |                            15: check the linpack result in L1 server                             |
+190522-22:15:25 INFO ----------------------------------------------------------------------------------------------------
+190522-22:15:25 INFO Check the Rack Level linpack result
+190522-22:15:25 INFO WR00L2L4      577536   384     4     8            2943.90            4.36240e+04
+190522-22:15:25 INFO    HPL Efficiency by CPU Cycle   75.744%
+190522-22:15:25 INFO    HPL Efficiency by BUS Cycle   66.110%
+190522-22:15:25 INFO  Rack Level Linpack Test pass
+190522-22:15:25 TESTE PASS tom.py
